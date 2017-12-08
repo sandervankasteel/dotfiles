@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/sander/.oh-my-zsh
+export ZSH=/home/sander/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -70,7 +70,7 @@ source $ZSH/oh-my-zsh.sh
 # fi
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+export ARCHFLAGS="-arch x86_64"
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
@@ -83,3 +83,20 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+export ANDROID_HOME=~/Library/Android/sdk/
+
+export PATH=/usr/local/bin/go/bin:$PATH
+export PATH="/usr/local/opt/qt/bin:$PATH:${JAVA_HOME}/bin"
+export PATH=$ANDROID_HOME/platform-tools:$PATH
+export PATH=$ANDROID_HOME/tools:$PATH
+export PATH=/usr/local/Cellar/php70/7.0.20_12/bin:$PATH
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+export PATH="~/.composer/vendor/bin:$PATH"
+
+alias homestead_up='cd ~/VMs/Homestead && vagrant up'
+alias homestead_down='cd ~/VMs/Homestead && vagrant halt'
+alias homestead_ssh='cd ~/VMs/Homestead && vagrant ssh'
+alias homestead_status='cd ~/VMs/Homestead && vagrant status'
+alias homeboy='php ~/tools/homeboy/homeboy'
