@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/sander/.oh-my-zsh
+#export ZSH=/home/sander/.oh-my-zsh
+export ZSH=/usr/share/oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -83,7 +84,7 @@ export ARCHFLAGS="-arch x86_64"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export JAVA_HOME=$(/usr/libexec/java_home)
+#export JAVA_HOME=$(/usr/libexec/java_home)
 
 export ANDROID_HOME=~/Library/Android/sdk/
 
