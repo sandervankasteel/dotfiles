@@ -95,6 +95,7 @@ export PATH=$ANDROID_HOME/tools:$PATH
 export PATH=/usr/local/Cellar/php70/7.0.20_12/bin:$PATH
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="~/.composer/vendor/bin:$PATH"
+export PATH="~/.gem/ruby/2.5.0/bin:$PATH"
 
 alias homestead_up='cd ~/VMs/Homestead && vagrant up'
 alias homestead_down='cd ~/VMs/Homestead && vagrant halt'
