@@ -104,3 +104,5 @@ alias homestead_down='cd ~/VMs/Homestead && vagrant halt'
 alias homestead_ssh='cd ~/VMs/Homestead && vagrant ssh'
 alias homestead_status='cd ~/VMs/Homestead && vagrant status'
 alias packer='packer-aur'
+
+. ~/tools/z/z.sh
