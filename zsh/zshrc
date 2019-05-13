@@ -55,7 +55,7 @@ plugins=(git python vagrant)
 
 # User configuration
 
-export PATH="/sw/bin:/sw/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:~/.composer/vendor/bin"
+export PATH="/sw/bin:/sw/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:~/.config/composer/vendor/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -98,6 +98,7 @@ export PATH="~/.composer/vendor/bin:$PATH"
 export PATH="~/.gem/ruby/2.5.0/bin:$PATH"
 
 export VDPAU_DRIVER=va_gl
+export LIBVA_DRIVER_NAME=iHD
 
 alias homestead_up='cd ~/VMs/Homestead && vagrant up'
 alias homestead_down='cd ~/VMs/Homestead && vagrant halt'
@@ -106,3 +107,13 @@ alias homestead_status='cd ~/VMs/Homestead && vagrant status'
 alias packer='packer-aur'
 
 . ~/tools/z/z.sh
+
+alias reset_term='~/tools/after-ssh.sh'
+
+#if [[ ! -o login ]]; then
+  # don't do this in a login shell
+  # because it happens anyway
+  #. ~/.zlogout
+  #~/tools/after-ssh.sh
+  #echo "LOGGING OUT!"
+#fi
