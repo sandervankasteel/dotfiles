@@ -1,0 +1,4 @@
+language: shell
+
+script:
+  - echo -n "Hello world"
