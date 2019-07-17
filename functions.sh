@@ -1,7 +1,14 @@
 #!/bin/bash
 
 function install_kitty_configuration() {
-    echo "Installing kitty configuration..."
+    KITTY_FOUND=$(which kitty)
+    
+    #&& -h ~/.nanorc
+    if [ ! -z $KITTY_FOUND ]; then
+        echo 'Installing kitty configuration...'
+    else
+        echo 'Skipping kitty configuration'
+    fi
 }
 
 function install_nano_configuration() {
