@@ -55,7 +55,7 @@ plugins=(git python vagrant z)
 
 # User configuration
 
-export PATH="/sw/bin:/sw/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin"
+export PATH="/sw/bin:/sw/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:~/.config/composer/vendor/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -116,10 +116,8 @@ alias hawking_config_mount='sshfs -o allow_other,IdentityFile=~/.ssh/id_rsa root
 alias vps_services_mount='sshfs -o allow_other,IdentityFile=~/.ssh/id_rsa root@163.172.164.110:/srv/docker-compose /home/sander/vps/services'
 alias vps_config_mount='sshfs -o allow_other,IdentityFile=~/.ssh/id_rsa root@163.172.164.110:/etc /home/sander/vps/etc'
 
-# . ~/tools/z/z.sh
-
 export CAPACITOR_ANDROID_STUDIO_PATH=/opt/android-studio/bin/studio.sh
-export LIBVA_DRIVER_NAME=radeonsi
+#export LIBVA_DRIVER_NAME=radeonsi
 
 #export open='nautilus $1'
 
@@ -128,3 +126,14 @@ xset b 0 0 0
 
 unsetopt BEEP
 source /usr/share/nvm/init-nvm.sh
+. ~/tools/z/z.sh
+
+alias reset_term='~/tools/after-ssh.sh'
+
+#if [[ ! -o login ]]; then
+  # don't do this in a login shell
+  # because it happens anyway
+  #. ~/.zlogout
+  #~/tools/after-ssh.sh
+  #echo "LOGGING OUT!"
+#fi
